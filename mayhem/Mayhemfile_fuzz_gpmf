@@ -1,0 +1,10 @@
+project: savantenvs/gpmf-parser
+target: fuzz_gpmf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gpmf/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_gpmf
+    libfuzzer: true
+    timeout: 5
